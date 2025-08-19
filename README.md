@@ -77,10 +77,12 @@ examenFinalPruebas/
 ├── public/
 │   ├── index.html            # Página principal
 │   ├── styles.css            # Estilos CSS
-│   └── app.js                # Lógica de la interfaz
+│   ├── app.js                # Lógica de la interfaz
+│   └── .nojekyll             # Archivo para GitHub Pages
 ├── .github/
 │   └── workflows/
-│       └── ci.yml            # Pipeline de CI/CD
+│       ├── ci.yml            # Pipeline de CI
+│       └── deploy.yml        # Pipeline de CD a GitHub Pages
 ├── jest.config.js            # Configuración de Jest
 ├── package.json              # Dependencias y scripts
 └── README.md                 # Este archivo
@@ -101,14 +103,20 @@ examenFinalPruebas/
 ## Despliegue
 
 ### GitHub Pages
-El proyecto se despliega automáticamente a GitHub Pages:
-- **Preview:** Disponible en cada Pull Request
-- **Producción:** Desplegado automáticamente al merge a main
+El proyecto se despliega automáticamente a GitHub Pages en el mismo repositorio:
+- **URL de producción:** `https://alpullaguarisw.github.io/examenFinalPruebas/`
+- **Despliegue automático:** Al hacer merge a main (solo si CI pasa)
+- **Sin configuración adicional:** Todo se maneja automáticamente
 
-### Configuración
-1. Habilitar GitHub Pages en la configuración del repositorio
-2. Configurar la rama `gh-pages` como fuente
-3. El workflow de GitHub Actions se encarga del resto
+### Configuración Requerida
+1. **Habilitar GitHub Pages** en Settings > Pages del repositorio
+2. **Source:** Deploy from a branch
+3. **Branch:** `gh-pages` (se crea automáticamente)
+4. **Folder:** `/ (root)`
+
+### Workflows de GitHub Actions
+- **CI:** Ejecuta tests y linting en cada push/PR
+- **Deploy:** Despliega automáticamente a GitHub Pages en merge a main
 
 ## Tests
 
@@ -133,7 +141,7 @@ npm run test:coverage
 - **Jest** para testing
 - **ESLint** para linting
 - **GitHub Actions** para CI/CD
-- **GitHub Pages** para hosting
+- **GitHub Pages** para hosting (en el mismo repositorio)
 
 ## Contribución
 1. Fork del repositorio
@@ -147,4 +155,4 @@ Este proyecto está bajo la Licencia ISC.
 
 ---
 
-**Nota:** Este proyecto cumple con todos los requisitos del examen final de Pruebas de Software, incluyendo las funciones obligatorias, tests, cobertura de código, y despliegue automático.
+**Nota:** Este proyecto cumple con todos los requisitos del examen final de Pruebas de Software, incluyendo las funciones obligatorias, tests, cobertura de código, y despliegue automático a GitHub Pages.
