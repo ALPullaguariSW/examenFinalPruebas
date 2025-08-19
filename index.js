@@ -1,5 +1,5 @@
-const exress = require('express');
-const app = exress();
+import express from 'express';
+const app = express();
 const port = process.env.PORT || 3000;
 
 //endpoint de respuesta

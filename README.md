@@ -105,7 +105,7 @@ examenFinalPruebas/
 ### GitHub Pages
 El proyecto se despliega automáticamente a GitHub Pages en el mismo repositorio:
 - **URL de producción:** `https://alpullaguarisw.github.io/examenFinalPruebas/`
-- **Despliegue automático:** Al hacer merge a main (solo si CI pasa)
+- **Despliegue automático:** Al hacer push a main (solo si CI pasa)
 - **Sin configuración adicional:** Todo se maneja automáticamente
 
 ### Configuración Requerida
@@ -116,7 +116,7 @@ El proyecto se despliega automáticamente a GitHub Pages en el mismo repositorio
 
 ### Workflows de GitHub Actions
 - **CI:** Ejecuta tests y linting en cada push/PR
-- **Deploy:** Despliega automáticamente a GitHub Pages en merge a main
+- **Deploy:** Despliega automáticamente a GitHub Pages en push a main
 
 ## Tests
 
