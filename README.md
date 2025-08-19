@@ -90,7 +90,7 @@ El proyecto se despliega automáticamente a GitHub Pages en el mismo repositorio
 ### Configuración Requerida
 1. **Habilitar GitHub Pages** en Settings > Pages del repositorio
 2. **Source:** Deploy from a branch
-3. **Branch:** `gh-pages` (se crea automáticamente)
+3. **Branch:** `GitHub Actions` (se crea automáticamente)
 4. **Folder:** `/ (root)`
 
 ### Workflows de GitHub Actions
