@@ -67,27 +67,6 @@ npm start
 npm run build
 ```
 
-## Estructura del Proyecto
-```
-examenFinalPruebas/
-├── src/
-│   └── utils/
-│       ├── clima.js          # Funciones de conversión y media móvil
-│       └── clima.test.js     # Tests de las funciones
-├── public/
-│   ├── index.html            # Página principal
-│   ├── styles.css            # Estilos CSS
-│   ├── app.js                # Lógica de la interfaz
-│   └── .nojekyll             # Archivo para GitHub Pages
-├── .github/
-│   └── workflows/
-│       ├── ci.yml            # Pipeline de CI
-│       └── deploy.yml        # Pipeline de CD a GitHub Pages
-├── jest.config.js            # Configuración de Jest
-├── package.json              # Dependencias y scripts
-└── README.md                 # Este archivo
-```
-
 ## Criterios de Aceptación
 
 ### CI (Integración Continua)
@@ -136,23 +115,6 @@ npm run test:coverage
 - Validación de errores (TypeError, RangeError)
 - Redondeo correcto de decimales
 
-## Tecnologías Utilizadas
-- **JavaScript ES6+** con módulos
-- **Jest** para testing
-- **ESLint** para linting
-- **GitHub Actions** para CI/CD
-- **GitHub Pages** para hosting (en el mismo repositorio)
-
-## Contribución
-1. Fork del repositorio
-2. Crear rama feature (`git checkout -b feature/AmazingFeature`)
-3. Commit de cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abrir Pull Request
-
-## Licencia
-Este proyecto está bajo la Licencia ISC.
 
 ---
 
-**Nota:** Este proyecto cumple con todos los requisitos del examen final de Pruebas de Software, incluyendo las funciones obligatorias, tests, cobertura de código, y despliegue automático a GitHub Pages.
