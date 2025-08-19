@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil — Clima & Conversión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Perfil — Clima & Conversión</h1>
+    </header>
+
+    <main>
+        <section class="profile">
+            <h2>Información Personal</h2>
+            <div class="profile-info">
+                <p><strong>Nombre completo:</strong> Axel Lenin Pullaguari Cedeño</p>
+                <p><strong>NRC:</strong> 23311</p>
+                <p><strong>Correo institucional:</strong> alpullaguari@espe.edu.ec</p>
+            </div>
+        </section>
+
+        <section class="presentation">
+            <h2>Presentación</h2>
+            <p>
+                Soy un desarrollador backend que disfruta del poder de la arquitectura de microservicios 
+                y se compromete a escribir código robusto y escalable. Mi enfoque es crear soluciones 
+                limpias y mantenibles para problemas complejos. Cuando no estoy programando, me encontrarás 
+                explorando mi pasión por la fotografía y compartiendo mi perspectiva en Instagram.
+            </p>
+        </section>
+
+        <section class="personal-data">
+            <h2>Datos Personales</h2>
+            <ul>
+                <li>Vivo en Quito</li>
+                <li>Estudié en el Instituto Nacional Mejía</li>
+                <li>Mi celular es +593 978643991</li>
+            </ul>
+        </section>
+
+        <section class="demo">
+            <h2>Demostración de Funciones</h2>
+            <div class="demo-container">
+                <div class="temp-conversion">
+                    <h3>Conversión de Temperatura</h3>
+                    <div class="input-group">
+                        <label for="celsius">Celsius:</label>
+                        <input type="number" id="celsius" placeholder="Ingrese °C" step="0.1">
+                        <button onclick="convertToFahrenheit()">Convertir a °F</button>
+                        <span id="fahrenheit-result"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="fahrenheit">Fahrenheit:</label>
+                        <input type="number" id="fahrenheit" placeholder="Ingrese °F" step="0.1">
+                        <button onclick="convertToCelsius()">Convertir a °C</button>
+                        <span id="celsius-result"></span>
+                    </div>
+                </div>
+
+                <div class="moving-average">
+                    <h3>Media Móvil</h3>
+                    <div class="input-group">
+                        <label for="series">Serie (números separados por comas):</label>
+                        <input type="text" id="series" placeholder="10,20,30,40" value="10,20,30,40">
+                    </div>
+                    <div class="input-group">
+                        <label for="window">Ventana:</label>
+                        <input type="number" id="window" placeholder="2" value="2" min="2">
+                        <button onclick="calculateMovingAverage()">Calcular</button>
+                    </div>
+                    <div id="moving-average-result"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Axel Lenin Pullaguari Cedeño - NRC: 23311</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

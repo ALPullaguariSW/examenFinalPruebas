@@ -1,0 +1,35 @@
+{
+  "name": "labfinal",
+  "version": "1.0.0",
+  "description": "Proyecto de Clima & Conversión con funciones de temperatura y media móvil",
+  "license": "ISC",
+  "author": "Axel Lenin Pullaguari Cedeño",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "lint": "npx eslint .",
+    "start": "node index.js",
+    "build": "echo 'Build completed successfully'"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.32.0",
+    "jest": "^30.0.5"
+  },
+  "jest": {
+    "preset": "default",
+    "extensionsToTreatAsEsm": [".js"],
+    "globals": {
+      "ts-jest": {
+        "useESM": true
+      }
+    },
+    "moduleNameMapping": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    }
+  }
+}
