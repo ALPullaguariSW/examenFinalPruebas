@@ -2,22 +2,28 @@ import { toCelsius, toFahrenheit, movingAverage } from './clima.js';
 
 describe('Funciones de Conversión de Temperatura', () => {
     describe('toCelsius', () => {
+
+        // Convertir 32°F a 0.0°C
         test('convierte 32°F a 0.0°C', () => {
             expect(toCelsius(32)).toBe(0.0);
         });
 
+        // Convertir 212°F a 100.0°C
         test('convierte 212°F a 100.0°C', () => {
             expect(toCelsius(212)).toBe(100.0);
         });
 
+        // Convertir -40°F a -40.0°C
         test('convierte -40°F a -40.0°C', () => {
             expect(toCelsius(-40)).toBe(-40.0);
         });
 
+        // Redondear correctamente a 1 decimal
         test('redondea correctamente a 1 decimal', () => {
             expect(toCelsius(98.6)).toBe(37.0);
         });
 
+        // Los TypeError funcionan
         test('lanza TypeError para valores no numéricos', () => {
             expect(() => toCelsius('32')).toThrow(TypeError);
             expect(() => toCelsius(null)).toThrow(TypeError);
